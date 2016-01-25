@@ -1,0 +1,20 @@
+<% include ./patial/header %>
+    <div class="row">
+        <h1>Store Api - <%= username %></h1> 
+        <div class=" col-md-6 col-xs-12">
+            <h3>Edit Product</h3> 
+            <form  role="form"  action="/products/modify/<%= id %>" method="post">
+                <div class="form-group">
+                    <label>Product Name: </label>
+                    <input type="text" name="productname" value="<%= product.product_name %>" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Price ($): </label>
+                    <input type="price" name="price" value="<%= product.price %>" class="form-control"/>
+                </div>
+                <br/>
+                <input type="submit" value="Submit" class="btn btn-default"/>
+            </form>
+        </div>
+    </div>
+<% include ./patial/footer %>

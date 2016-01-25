@@ -1,0 +1,14 @@
+<% include ./patial/header %>
+        <h1>Store Api</h1> 
+        <a href="/auth/login" class="btn btn-primary">Login</a>
+
+        <h2>List Product</h2>
+        <br/>
+        <ul class="list-group">
+        <% for(var i=0; i<products.length; i++) {%>
+            <li class="list-group-item">
+                <%= products[i].product_name %>&nbsp;&nbsp;&nbsp; $<%= products[i].price %>&nbsp;&nbsp;&nbsp;
+            </li>
+        <% } %>
+        </ul>
+<% include ./patial/footer %>

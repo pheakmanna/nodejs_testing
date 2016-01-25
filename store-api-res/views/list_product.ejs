@@ -1,0 +1,43 @@
+<% include ./patial/header %>
+    <h1>Store Api - <%= username %></h1>
+    
+    <h2>List Product</h2>
+    <form role="form" action="/auth/logout" method="get">
+        <button type="submit" class="btn btn-default">Logout</button>
+    </form>
+    <br/>
+    <a href="/products/add" class="btn btn-primary">Create Product</a><br/><br/>
+    <ul class="list-group" >
+    <% for(var i=0; i<products.length; i++) {%>
+        <li  class="list-group-item" style="overflow: hidden;">
+            <%= products[i].product_name %>&nbsp;&nbsp;&nbsp; $<%= products[i].price %>&nbsp;&nbsp;&nbsp;
+            <div class="btn-group pull-right" >
+                <a href="/products/modify/<%= products[i]._id %>" class="btn btn-info">Modify</a>&nbsp;&nbsp;&nbsp;
+                <a href="/products/remove/<%= products[i]._id %>" class="btn btn-danger">Remove</a>
+            </div>
+        </li>
+    <% } %>
+    </ul>
+    <div class="row">
+        <button id="send">send</button>
+    </div>
+    <p id="note"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            var socket = io();
+            
+            $("#send").click(function(){
+                socket.emit('notification','test');
+            });
+            
+            socket.on('notification',function(msg){
+
+                    $("#note").append(msg+"<br/>");
+                });
+            
+        });
+    </script>
+<% include ./patial/footer %>
