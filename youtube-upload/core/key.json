@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "refined-algebra-120200",
+  "private_key_id": "f0f9c44941d42804f4a7770832ba0b997c40f6a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCUiQzLCDEoXLvZ\nu2D2HNoLslPAW9oepDiyVBtQ+mKY+h5UI6I2LbJgFfRiS67qtiB8QXIV8phk4lfH\n4MzJTjDZdbj5EBtmE88e1c8+Wqo+l/qTmfivIY46mCrCYxMjVjoR/ZIf1rf4OAX6\nBT85E1eqSIx1rhKiHAOQ/1GlQxBSEDBWsVYzDPBANDKPLLbFm1kbZQlvuIP+ifBV\npji0Sbp5II+1Hia9AVf3BvN/3vAPLV/NQKJLsh2wX4jWPI5Vif8+3Qia89wp/X/j\n2djmvJJcWOLQedthHU/N2ea+dn29W2he4qRfCXlcDMtiMDcyluMaXZJ8QNM3cBVF\nClDb3RJPAgMBAAECggEAe+96sDIOqknuJ/eUKObb/OR3w0ogzm5iLFHHVSMGf/Q6\nuCPfZmtsqYXIGvhhY9BBfMwywCNiitLdQZbN6K4ITnpOs+p/ogWnTWhDexi1cnLn\nDp9rg91wym1LSFTYlCSPYZF9inljmYZNXldgcGQ2Qow0PsDXJVJQm3yeCFHT3VQB\nmk6ZDt05DfzDan0AMjnsQ9uQrLl6AOblZpQXFA7C+zNdRNGqdXBpXMYYPX8WKg9j\n+oE5RjcdI4ULFBbeFmlsi4tdleAy96OE+lX/dPkwUiAgFWPYMk9f4aJK4bL4vwqb\nigoUJIqe1RIlJgBgFOhcfboaDONvd0gByrnEuO10KQKBgQDil8qZXWhN071dJE91\n5EzXtUUETI5QzFcS3hc+94aOiD5e6izicJTiy9ZGSI0ScZxQOSmfwoAzuFHZxlOl\nSzMHAFbFRSu5HRK/jKplN7hxcHLsz8XR2SNlcoozuppMlP8owVGZ4eyrtY6u1T0J\nCAmQ/60XS+UdQ2WPDGKzP1S9CwKBgQCnz+m90MSwdAfH/76I4+scEXqqfzeOwqSd\njqjXs7MfiProKHE2LuhAlIqGQiHxRcV3N/hzLkhWOL3wyRaAvUPs6kMWUP5b7olJ\n1A+AXbWBcZnDb2X5hQT+6Jb0U73huK9+Il+6xgAVx7VKqun3eawmwfBaMr5ZUQhj\noXi2ykZiTQKBgFLOgf2WAx4d+R/muxssOWDDH9u4VnH0mwWMIBakwomoBJMPJSQD\nXIWdVEsPDG7nEebHXQzDObKs80yQi9TmLFmsqAkjhBz8IPPbZhHjUQYzv+wG6hYM\nMkFKoHLTCLxf3vd33mhMBf+iM+h0iP+Z7lUM+qZ+19Xf4WdrcU5sIH2NAoGASO15\nNi2BHPH/47HH2vO53CPYfDn3Kgp6waIazErjAERmTfgtYw+1jUNAhCI/X/wjWbEw\nPtYRR683FGo/ZklaOJ6B8zPVppwee8A10GJpG80DtsQ1u99MEX+BAsNV1L+PPLCx\ni5i6trxok/982Di/UMSdsIU25dfqXmnw7Pcw6U0CgYBOvfU8tI444PCa8jkRxIa3\nFMKB6RlwQL7FICXRDLS/aV7m/rT8B6uEzf120N7zZDrYFPDJGnqvUxvTxB9eKcl+\nsq/5iIIPB0FtesjmFAchXqy61BJDn3Z/l734+nnI8K++3TiyrZ5hQfLlyqE1X4zM\n3NbqcX+dFxTzVsrFXFOoFg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "service@refined-algebra-120200.iam.gserviceaccount.com",
+  "client_id": "115658215667041142331",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service%40refined-algebra-120200.iam.gserviceaccount.com"
+}
