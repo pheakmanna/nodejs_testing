@@ -11,6 +11,10 @@ let http = require('http');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.use(function(req, res, next){
+    next();
+});
+
 /* Routes */
 let userRoute = require("./routes/userroute");
 
@@ -21,7 +25,6 @@ app.use("/api/auth", authRoute);
 
 /* Create Server */
 let server = http.createServer(app);
-
 /* Run Server On Port */
 server.listen(port, function(){
     console.log('%s listening at %s ', "localhost" , port);

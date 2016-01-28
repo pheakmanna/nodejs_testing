@@ -2,7 +2,6 @@
 
 let model = require("../models/model")();
 let User = model.User;
-//let Validator = require("validator");
 var Validator = require('validatorjs');
 var _ = require("underscore");
 let User_Func = {};
@@ -18,15 +17,13 @@ User_Func.validateUser = function *(req) {
         firstName: req.body.firstname,
         lastName: req.body.lastname,
         email: req.body.email,
-        password: req.body.password,
-        admin: req.body.admin
+        password: req.body.password
     };
     var rules = {
         firstName: 'required',
         lastName: 'required',
         email: 'required|verify_email|email',
-        password:'required',
-        admin: 'required'
+        password:'required'
     };
 
     var validation = new Validator(data, rules);
@@ -37,9 +34,9 @@ User_Func.validateUser = function *(req) {
 //********** Generator Function Insert User ***********/
 User_Func.insertUser = function *(req, res) {
     let result = yield User_Func.validateUser(req);
-    if(!_.isEmpty(result.errors))
-        res.json(result.errors);
-    else{
+    if (!_.isEmpty(result.errors))
+        return {success: false, data: result.errors};
+    else {
         let user = User.build({
             firstName: req.body.firstname,
             lastName: req.body.lastname,
@@ -48,10 +45,12 @@ User_Func.insertUser = function *(req, res) {
             admin: req.body.admin
         });
         let result = yield user.save();
-        res.json(result);
+        return {success: true,
+                data: {
+                    id: result.id,
+                    email: result.email
+                }};
     }
-    res.end();
-    /**/
 };
 
 //************ Generator Function get all user *********/
@@ -75,6 +74,19 @@ User_Func.getOneUserById = function *(id){
         attributes: ["id" , "firstName", "lastName", "email"],
         where: {id: id}});
     return result;
+};
+
+//************ Update User Password ******/
+User_Func.updatePassword = function *(email, new_password){
+    try {
+        console.log(new_password);
+        let result = yield User.update(
+            {password: new_password},
+            {where: {email: email}});
+        return result[0];
+    }catch (err){
+        return err;
+    }
 };
 
 module.exports = User_Func;
