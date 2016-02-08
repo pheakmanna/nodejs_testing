@@ -65,14 +65,10 @@ app.use('/products', products);
     response.ok(req, res,"test","hello");
 });*/
 
-app.use(function(req, res, next) {
-    next();
-});
-
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
+/*app.use(function(err, req, res, next) {
     response.error(req, res, err);
-});
+});*/
 
 server.listen(port, function (err) {
     if (err) {

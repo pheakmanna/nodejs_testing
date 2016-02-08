@@ -8,8 +8,8 @@ var fs = require('fs');
 var middleware = require('../bin/middleware');
 var formidable = require("formidable");
 
-// route middleware to verify a token
-router.use(middleware);
+// route middleware to verify a token//
+//router.use(middleware);
 
 /* GET users listing. */
 router

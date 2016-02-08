@@ -1,0 +1,20 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "loopback",
+    "username": "root",
+    "password": "",
+    "name": "TestingData",
+    "connector": "mysql"
+  },
+  "TestingData": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "loopback",
+    "username": "root",
+    "password": "",
+    "name": "TestingData",
+    "connector": "mysql"
+  }
+}

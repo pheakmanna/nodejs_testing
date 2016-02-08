@@ -4,7 +4,7 @@ let response = require('../bin/respone');
 let router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
     let db = req.db;
     let products = db.get('tbl_product');
     products
