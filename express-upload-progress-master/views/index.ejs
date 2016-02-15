@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Valiant 360 Pano Player</title>
+		<meta charset="utf-8">
+
+		<!-- Valiant360 control styles -->
+		<link rel="stylesheet" type="text/css" href="/360/css/valiant360.css" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+	</head>
+    <body>
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <form method="post" action="/"  enctype="multipart/form-data">
+                            <h3>Upload Video</h3>
+                            <input type="file" name="myFile" id="myFile">
+                            <hr/>
+                            <hr/>
+                            <div class="form-action">
+                                <input class="btn btn-primary" type="submit" value="submit"/>
+                            </div>
+                        </form>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2>Youtube Upload</h2>
+                    <div class="span12">
+                        <form method="post" action="/youtube-upload"  enctype="multipart/form-data">
+                            <input type="file" name="myvideo" id="myvideo">
+                            <hr/>
+                            <hr/>
+                            <div class="form-action">
+                                <input class="btn btn-primary" type="submit" name="youtube-submit" value="submit"/>
+                            </div>
+                        </form>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <div class="progress progress-striped active hide">
+                            <div class="bar" style="width: 0%"></div>
+                            <div class="percent"><p></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span12">
+                        <div class="alert hide">
+                            <button class="close" type="button" data-dimiss='alert'></button>
+                            <span>
+                                <strong class="message"></strong>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <video width="320" height="240" controls autoplay>
+                    <source src="http://localhost:3000/stream/overpass-clip.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="valiantPhoto" data-video-src="http://localhost:3000/stream/overpass-clip.mp4" style="width: 700px; height: 380px;"></div>
+                <hr/>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/9ZRkUAufZCY" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            </div>
+        <script async="" src="//www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript" src="/360/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="/360/js/three.min.js"></script>
+
+        <!-- Valiant360 plugin, load after jQuery and Three.js -->
+        <script type="text/javascript" src="/360/jquery.valiant360.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.valiantPhoto').Valiant360();
+            });
+        </script>
+	</body>
+</html>
